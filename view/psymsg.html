@@ -4,10 +4,10 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<meta name="format-detection" content="telphone=no" />
-		<script src="js/jquery-1.11.1.min.js"></script>
-		<link href="css/bootstrap.min.css" />
-		<script src="js/bootstrap.min.js"></script>
-		<link rel="stylesheet" href="css/wyswx.css" />
+		<script src="../js/jquery-1.11.1.min.js"></script>
+		<link href="../css/bootstrap.min.css" />
+		<script src="../js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="../css/wyswx.css" />
 
 		<title>五云山疗养院</title>
 	</head>
@@ -16,10 +16,10 @@
 		<div class="title" id="theme">
   			<div class="title-name">心理测评</div>
   			<div class="title-left">
-     			<a href="javascript:history.go(-1)"><img src="img/backicon.png" ></a>
+     			<a href="javascript:history.go(-1)"><img src="../img/backicon.png" ></a>
    			</div>
  			<div class="title-right">
- 				<a href="javascript:history.go(-1)"><img src="img/home.png" ></a>
+ 				<a href="javascript:history.go(-1)"><img src="../img/home.png" ></a>
  			</div>
 		</div>
 		
@@ -37,16 +37,16 @@
 				<div>
 					<label class="datatype">性别</label>
 					   <div class="radiocheck" status="1" index='0'>
-						<img class="checkimg" src="img/checked.png">
+						<img class="checkimg" src="../img/checked.png">
 						<label class="radiolabel">&nbsp;男 &nbsp;</label>
-						<img class="seximg"  src="img/male.png">
+						<img class="seximg"  src="../img/male.png">
 						<input type="radio" name="sex" checked='checked' value="0" />
 					
 				     </div>
 				      <div class="radiocheck" status="0" index='1'>
-						<img style="margin-left:20px" class="checkimg"  src="img/unchecked.png">
+						<img style="margin-left:20px" class="checkimg"  src="../img/unchecked.png">
 						<label class="radiolabel">&nbsp;女&nbsp;</label>
-						<img class="seximg" src="img/female.png">
+						<img class="seximg" src="../img/female.png">
 						<input type="radio" name="sex"  value="1"/>
 					</div>
 				
@@ -90,18 +90,18 @@
     		//如果不是选中状态的
     		else{
     			$(this).find('input').attr('checked',true);
-    			$(this).find('.checkimg').attr('src','img/checked.png');
+    			$(this).find('.checkimg').attr('src','../img/checked.png');
     			$(this).attr('status','1');
     			//如果是第一个
     		if(index==0){
     		$(this).next().find('input').attr('checked',false);
-    			$(this).next().find('.checkimg').attr('src','img/unchecked.png');
+    			$(this).next().find('.checkimg').attr('src','../img/unchecked.png');
     			$(this).next().attr('status','0');
     		}
     		//如果是第二个
     		else{
     			$(this).prev().find('input').attr('checked',false);
-    			$(this).prev().find('.checkimg').attr('src','img/unchecked.png');
+    			$(this).prev().find('.checkimg').attr('src','../img/unchecked.png');
     			$(this).prev().attr('status','0');
     		}
     		}

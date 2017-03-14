@@ -5,13 +5,13 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<meta name="format-detection" content="telphone=no" />
-		<script src="js/jquery-1.11.1.min.js"></script>
-		<link href="css/bootstrap.min.css" />
-		<script src="js/bootstrap.min.js"></script>
-		<link rel="stylesheet" href="css/wyswx.css" />
-		<link rel="stylesheet" type="text/css" href="css/mlayerUtil.css" />
-		<script src="js/layer.m.js"></script>
-		<script src="js/mlayerUtil.js"></script>
+		<script src="../js/jquery-1.11.1.min.js"></script>
+		<link href="../css/bootstrap.min.css" />
+		<script src="../js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="../css/wyswx.css" />
+		<link rel="stylesheet" type="text/css" href="../css/mlayerUtil.css" />
+		<script src="../js/layer.m.js"></script>
+		<script src="../js/mlayerUtil.js"></script>
 		<title>五云山疗养院</title>
 	</head>
 
@@ -20,14 +20,14 @@
 		<div class="title" id="theme">
 			<div class="title-name">老年疗休养</div>
 			<div class="title-left">
-				<a href="javascript:history.go(-1)"><img src="img/backicon.png" class="myimg"></a>
+				<a href="javascript:history.go(-1)"><img src="../img/backicon.png" class="myimg"></a>
 			</div>
 			<div class="title-right"></div>
 		</div>
 		<div class="packageul self-margin">
 			<input type="hidden" id="packageId" value="1" />
 			<li status="0" index="1" id="package1">
-				<img class="circleimg" index="1" src="img/uncircled.png" />
+				<img class="circleimg" index="1" src="../img/uncircled.png" />
 				<div class="rightcont">
 
 					<div class="titlediv">
@@ -46,7 +46,7 @@
 
 			</li>
 			<li status="1" index="2" id="package2">
-				<img class="circleimg" index="2" src="img/circled.png" />
+				<img class="circleimg" index="2" src="../img/circled.png" />
 				<div class="rightcont">
 
 					<div class="titlediv">
@@ -64,7 +64,7 @@
 				</div>
 			</li>
 			<li status="0" index="3" id="package3">
-				<img class="circleimg" index="3" src="img/uncircled.png" />
+				<img class="circleimg" index="3" src="../img/uncircled.png" />
 				<div class="rightcont">
 
 					<div class="titlediv">
@@ -105,7 +105,7 @@
 	    				var packageTel='18767101995';
 	    				var packageMail='97923@qq.com';
 	//  				var packageList=[{'name':'name',{{'name'}}}];
-	    		var htmlStr='<div class="popdiv"><div class="poptitle"><img class="packageSymimg" src="img/package/packageinfo.png"/><img class="closeimg closediv" src="img/package/packageCloseimg.png"/>';
+	    		var htmlStr='<div class="popdiv"><div class="poptitle"><img class="packageSymimg" src="../img/package/packageinfo.png"/><img class="closeimg closediv" src="../img/package/packageCloseimg.png"/>';
 	    		htmlStr+=packageName+'·详情'+'</div>';
 	    		//父项目开始
 	    		htmlStr+='<div class="checkitemli"><div class="itempaName">'
@@ -137,8 +137,8 @@
 	    		//父项目结束
 	    		htmlStr+='</div>';
 	    		//底部信息栏开始
-	    		htmlStr+='<div class="popdivBot"><div class="botleft"><div><img class="packageTelimg" src="img/package/packagetel.png"/><span>';
-	    		htmlStr+=packageTel+'</span></div></div><div class="botright"> <div><img  class="packageMailimg" src="img/package/packagemail.png"/> <span>';
+	    		htmlStr+='<div class="popdivBot"><div class="botleft"><div><img class="packageTelimg" src="../img/package/packagetel.png"/><span>';
+	    		htmlStr+=packageTel+'</span></div></div><div class="botright"> <div><img  class="packageMailimg" src="../img/package/packagemail.png"/> <span>';
 	    		htmlStr+=packageMail+'</span></div></div></div></div>';
 	    		
 	
@@ -167,9 +167,9 @@
 	    				//如果原来是有选套餐的
 	    				/*if(packageid!=0){*/
 	    					$('.packageul').find('li').attr('status','0');
-	    					$('.packageul').find('li' ).find('.circleimg').attr('src','img/uncircled.png')
+	    					$('.packageul').find('li' ).find('.circleimg').attr('src','../img/uncircled.png')
 	    					$(this).parent().attr('status','1');
-	    					$(this).attr('src','img/circled.png');
+	    					$(this).attr('src','../img/circled.png');
 	    					//ajax 异步操作  把套餐更改为index 的
 	//  					alert('当前选择的为'+index+'套餐');
 	    					setTimeout('history.back()',500);
@@ -177,7 +177,7 @@
 	    				//如果原来没有套餐
 	    				else{
 	    					$(this).parent().attr('status','1');
-	    					$(this).attr('src','img/circled.png');
+	    					$(this).attr('src','../img/circled.png');
 	    					//ajax 异步操作  把套餐更改为index 的
 	    					alert('当前选择的为'+index+'套餐');
 	    					setTimeout('history.back()',500);
@@ -189,7 +189,7 @@
 	    			//如果原来是选中的 取消选中操作 
 	    			else{
 	    			$(this).parent().attr('status','0');
-	    			$(this).attr('src','img/uncircled.png');
+	    			$(this).attr('src','../img/uncircled.png');
 	    				
 	    			}
 	    			
