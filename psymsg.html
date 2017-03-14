@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="format-detection" content="telphone=no" />
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<link href="css/bootstrap.min.css" />
+		<script src="js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="css/wyswx.css" />
+
+		<title>五云山疗养院</title>
+	</head>
+	<body>
+		
+		<div class="title" id="theme">
+  			<div class="title-name">心理测评</div>
+  			<div class="title-left">
+     			<a href="javascript:history.go(-1)"><img src="img/backicon.png" ></a>
+   			</div>
+ 			<div class="title-right">
+ 				<a href="javascript:history.go(-1)"><img src="img/home.png" ></a>
+ 			</div>
+		</div>
+		
+		<form action="" method="post" id="userinfo" class="formul self-margin">
+			<div class="formdiv ">
+			<li>
+				<label class="red needtip">*</label>
+				<div>
+					<label class="datatype">姓名</label>
+					<input class="data" name="name" id='name' placeholder="请输入您的姓名"/>
+				</div>
+			</li>
+			<li>
+				<label class="red needtip">*</label>
+				<div>
+					<label class="datatype">性别</label>
+					   <div class="radiocheck" status="1" index='0'>
+						<img class="checkimg" src="img/checked.png">
+						<label class="radiolabel">&nbsp;男 &nbsp;</label>
+						<img class="seximg"  src="img/male.png">
+						<input type="radio" name="sex" checked='checked' value="0" />
+					
+				     </div>
+				      <div class="radiocheck" status="0" index='1'>
+						<img style="margin-left:20px" class="checkimg"  src="img/unchecked.png">
+						<label class="radiolabel">&nbsp;女&nbsp;</label>
+						<img class="seximg" src="img/female.png">
+						<input type="radio" name="sex"  value="1"/>
+					</div>
+				
+				
+				</div>
+			</li>
+			<li>
+				<label class="red needtip">*</label>
+				<div>
+					<label class="datatype">年龄</label>
+					<input class="data" name="name" id='name' placeholder="请输入您的年龄"/>
+				</div>
+			</li>
+			<li>
+				<div>
+					<label class="datatype">联系方式</label>
+					<input class="data" name="tel" id='tel' placeholder="请输入您的手机号码"/>
+				</div>
+			</li>
+			</div>
+			
+		</form>
+		
+		
+		<div class="bot self-margin">
+			<button class="botblockBut">下一步</button>
+			
+		</div>
+	</body>
+	 
+    <script>
+    $(function(){
+    	//单选框的样式控制 
+    	$(".radiocheck").click(function(){
+    		var status=$(this).attr('status');
+    		var index=$(this).attr('index');
+    		//如果是选中状态的
+    		if(status==1){
+    			
+    		}
+    		//如果不是选中状态的
+    		else{
+    			$(this).find('input').attr('checked',true);
+    			$(this).find('.checkimg').attr('src','img/checked.png');
+    			$(this).attr('status','1');
+    			//如果是第一个
+    		if(index==0){
+    		$(this).next().find('input').attr('checked',false);
+    			$(this).next().find('.checkimg').attr('src','img/unchecked.png');
+    			$(this).next().attr('status','0');
+    		}
+    		//如果是第二个
+    		else{
+    			$(this).prev().find('input').attr('checked',false);
+    			$(this).prev().find('.checkimg').attr('src','img/unchecked.png');
+    			$(this).prev().attr('status','0');
+    		}
+    		}
+    		
+    	})
+    	
+    	
+    	
+    	
+    })
+    
+    </script>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="format-detection" content="telphone=no" />
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<link href="css/bootstrap.min.css" />
+		<script src="js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="css/wyswx.css" />
+		<link rel="stylesheet" type="text/css" href="css/mlayerUtil.css" />
+		<script src="js/layer.m.js"></script>
+		<script src="js/mlayerUtil.js"></script>
+		<title>五云山疗养院</title>
+	</head>
+
+	<body>
+
+		<div class="title" id="theme">
+			<div class="title-name">老年疗休养</div>
+			<div class="title-left">
+				<a href="javascript:history.go(-1)"><img src="img/backicon.png" class="myimg"></a>
+			</div>
+			<div class="title-right"></div>
+		</div>
+		<div class="packageul self-margin">
+			<input type="hidden" id="packageId" value="1" />
+			<li status="0" index="1" id="package1">
+				<img class="circleimg" index="1" src="img/uncircled.png" />
+				<div class="rightcont">
+
+					<div class="titlediv">
+						<div class="titlename">
+							套餐一
+						</div>
+						<div class="titleinfo">
+							套餐内容介绍
+						</div>
+						<label index="1" class="infoact" package='package'>查看详情</label>
+					</div>
+					<div class="info">
+						我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容
+					</div>
+				</div>
+
+			</li>
+			<li status="1" index="2" id="package2">
+				<img class="circleimg" index="2" src="img/circled.png" />
+				<div class="rightcont">
+
+					<div class="titlediv">
+						<div class="titlename">
+							套餐2
+						</div>
+						<div class="titleinfo">
+							套餐内容介绍
+						</div>
+						<label index="2" class="infoact">查看详情</label>
+					</div>
+					<div class="info">
+						我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容
+					</div>
+				</div>
+			</li>
+			<li status="0" index="3" id="package3">
+				<img class="circleimg" index="3" src="img/uncircled.png" />
+				<div class="rightcont">
+
+					<div class="titlediv">
+						<div class="titlename">
+							套餐一
+						</div>
+						<div class="titleinfo">
+							套餐内容介绍
+						</div>
+						<label index="3" class="infoact">查看详情</label>
+					</div>
+					<div class="info">
+
+					</div>
+				</div>
+			</li>
+
+		</div>
+		<br>
+
+	</body>
+
+	<script>
+		$(function(){
+
+	    		//弹出套餐详情的内容  
+	    		$(".infoact").click(function(){
+	    			//获取当前的package属性  将套餐的相关信息放到package中 
+	    			var package=$(this).attr('package');
+	    			var package='1';
+	    			if(package!=null&&package!=""){
+	    				
+	    		/*		var packageName=package.name;
+	    				var packageTel=package.tel;
+	    				var packageMail=package.mail;
+	    				var packageList=package.list;*/
+	    				var packageName='套餐一';
+	    				var packageTel='18767101995';
+	    				var packageMail='97923@qq.com';
+	//  				var packageList=[{'name':'name',{{'name'}}}];
+	    		var htmlStr='<div class="popdiv"><div class="poptitle"><img class="packageSymimg" src="img/package/packageinfo.png"/><img class="closeimg closediv" src="img/package/packageCloseimg.png"/>';
+	    		htmlStr+=packageName+'·详情'+'</div>';
+	    		//父项目开始
+	    		htmlStr+='<div class="checkitemli"><div class="itempaName">'
+	    		htmlStr+='父检查项目名称'+'</div><div class="itemsub"><label class="itemsubName">';
+	    		htmlStr+='子项目名称'+'</label><br><p class="itemsubCont">';
+	    		htmlStr+='我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容'+' </p></div>';
+	    		//子项目
+	    		htmlStr+='<div class="itemsub"><label class="itemsubName">';
+	    		htmlStr+='子项目名称'+'</label><br><p class="itemsubCont">';
+	    		htmlStr+='我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容'+' </p></div>';
+	    		
+	    			htmlStr+='<div class="itemsub"><label class="itemsubName">';
+	    		htmlStr+='子项目名称'+'</label><br><p class="itemsubCont">';
+	    		htmlStr+='我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容'+' </p></div>';
+	    		//父项目结束
+	    		htmlStr+='</div>';
+	    		
+	    		
+	    		//父项目开始
+	    		htmlStr+='<div class="checkitemli"><div class="itempaName">'
+	    		htmlStr+='父检查项目名称'+'</div><div class="itemsub"><label class="itemsubName">';
+	    		htmlStr+='子项目名称'+'</label><br><p class="itemsubCont">';
+	    		htmlStr+='我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容'+' </p></div>';
+	    		//子项目
+	    		htmlStr+='<div class="itemsub"><label class="itemsubName">';
+	    		htmlStr+='子项目名称'+'</label><br><p class="itemsubCont">';
+	    		htmlStr+='我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容'+' </p></div>';
+	  
+	    		//父项目结束
+	    		htmlStr+='</div>';
+	    		//底部信息栏开始
+	    		htmlStr+='<div class="popdivBot"><div class="botleft"><div><img class="packageTelimg" src="img/package/packagetel.png"/><span>';
+	    		htmlStr+=packageTel+'</span></div></div><div class="botright"> <div><img  class="packageMailimg" src="img/package/packagemail.png"/> <span>';
+	    		htmlStr+=packageMail+'</span></div></div></div></div>';
+	    		
+	
+				var styleStr='width:90%;height:auto;border-radius:5px';
+				mpage(htmlStr,styleStr);
+	    				
+	    				
+	    			}
+	    			
+	    			
+	    			
+	    			
+	    		})
+	    	
+	    		
+	    		
+	    		
+	
+	    		//选择的套餐的事件  最多选择一个  ，选择完成之后跳转到原来的页面
+	    		$('.circleimg').click(function(){
+	    			var status=$(this).parent().attr('status');
+	    			var packageid=$("#packageId").val();
+	    			var index=$(this).attr('index');
+	    			//如果原先为未选中的
+	    			if(status==0){
+	    				//如果原来是有选套餐的
+	    				/*if(packageid!=0){*/
+	    					$('.packageul').find('li').attr('status','0');
+	    					$('.packageul').find('li' ).find('.circleimg').attr('src','img/uncircled.png')
+	    					$(this).parent().attr('status','1');
+	    					$(this).attr('src','img/circled.png');
+	    					//ajax 异步操作  把套餐更改为index 的
+	//  					alert('当前选择的为'+index+'套餐');
+	    					setTimeout('history.back()',500);
+	    				/*}
+	    				//如果原来没有套餐
+	    				else{
+	    					$(this).parent().attr('status','1');
+	    					$(this).attr('src','img/circled.png');
+	    					//ajax 异步操作  把套餐更改为index 的
+	    					alert('当前选择的为'+index+'套餐');
+	    					setTimeout('history.back()',500);
+	    					
+	    				}
+	    				*/
+	    			}
+	    			
+	    			//如果原来是选中的 取消选中操作 
+	    			else{
+	    			$(this).parent().attr('status','0');
+	    			$(this).attr('src','img/uncircled.png');
+	    				
+	    			}
+	    			
+	    			
+	    		})
+	    		
+	    	})
+	</script>
+
+</html>

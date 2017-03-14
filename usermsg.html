@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="format-detection" content="telphone=no" />
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<link href="css/bootstrap.min.css" />
+		<script src="js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="css/wyswx.css" />
+		<!--引入日期选择器-->
+    <script src="js/mobiscroll.core-2.5.2.js" type="text/javascript"></script>
+	<script src="js/mobiscroll.core-2.5.2-zh.js" type="text/javascript"></script>
+	<link href="css/mobiscroll.core-2.5.2.css" rel="stylesheet" type="text/css">
+	<link href="css/mobiscroll.animation-2.5.2.css" rel="stylesheet" type="text/css">
+	<script src="js/mobiscroll.datetime-2.5.1.js" type="text/javascript"></script>
+	<script src="js/mobiscroll.datetime-2.5.1-zh.js" type="text/javascript"></script>
+	<script src="js/mobiscroll.android-ics-2.5.2.js" type="text/javascript"></script>
+	<link href="css/mobiscroll.android-ics-2.5.2.css" rel="stylesheet" type="text/css">
+		<title>五云山疗养院</title>
+	</head>
+	<body>
+		
+		<div class="title" id="theme">
+  			<div class="title-name">个人信息</div>
+  			<div class="title-left">
+     			<a href="javascript:history.go(-1)"><img src="img/backicon.png" class="myimg"></a>
+   			</div>
+ 			<div class="title-right"></div>
+		</div>
+		
+		<form action="" method="post" id="userinfo" class="formul self-margin">
+			<div class="formdiv ">
+			<li>
+				<label class="red needtip">*</label>
+				<div>
+					<label class="datatype">姓名</label>
+					<input class="data" name="name" id='name' placeholder="请输入您的姓名"/>
+				</div>
+			</li>
+			<li>
+				<label class="red needtip">*</label>
+				<div>
+					<label class="datatype">性别</label>
+					   <div class="radiocheck" status="1" index='0'>
+						<img class="checkimg" src="img/checked.png">
+						<label class="radiolabel">&nbsp;男 &nbsp;</label>
+						<img class="seximg"  src="img/male.png">
+						<input type="radio" name="sex" checked='checked' value="0" />
+					
+				     </div>
+				      <div class="radiocheck" status="0" index='1'>
+						<img style="margin-left:20px" class="checkimg"  src="img/unchecked.png">
+						<label class="radiolabel">&nbsp;女&nbsp;</label>
+						<img class="seximg" src="img/female.png">
+						<input type="radio" name="sex"  value="1"/>
+					</div>
+				
+				
+				</div>
+			</li>
+			<li>
+				<label class="red needtip">*</label>
+				<div>
+					<label class="datatype">年龄</label>
+					<input class="data" name="name" id='name' placeholder="请输入您的年龄"/>
+				</div>
+			</li>
+			<li>
+				<label class="red needtip">*</label>
+				<div>
+					<label class="datatype">手机号</label>
+					<input class="data" name="tel" id='tel' placeholder="请输入您的手机号码"/>
+				</div>
+			</li>
+			<li>
+				
+				<div>
+					<label class="datatype">婚姻状况</label>
+					<div class="radiocheck" status="1" index='0'>
+					<img class="checkimg" src="img/checked.png">
+						<label class="radiolabel">&nbsp;已婚&nbsp;</label>
+						
+						<input type="radio" name="married" checked='checked' value="0" />
+					
+				</div>
+				<div class="radiocheck" status="0"  index='1'>
+						<img style="margin-left:36px" class="checkimg"  src="img/unchecked.png">
+						<label class="radiolabel">&nbsp;未婚&nbsp;</label>
+						
+						<input type="radio" name="married"  value="1"/>
+				</div>
+				</div>
+			</li>
+			<li>
+				
+				<div>
+					<label class="datatype">身份证</label>
+					<input class="data" name="name" id='name' placeholder="请输入您的身份证号码"/>
+				</div>
+			</li>
+			<li>
+				
+				<div>
+					<label class="datatype">体检日期</label>
+					<input class="data" name="appDate" id="appDate" readonly="readonly"  placeholder="请输入您的体检日期"  value="2014-8-6"/>
+				</div>
+			</li>
+			<li>
+				
+				<div>
+					<label class="datatype">体检时间</label>
+					
+					<div class="radiocheck" status="1" index='0'>
+					<img class="checkimg" src="img/checked.png">
+						<label class="radiolabel">7:30~8:30</label>
+						
+						<input type="radio" name="checktime" checked='checked' value="0" />
+					
+				</div>
+				<div class="radiocheck" status="0"  index='1'>
+						<img style="margin-left:0px" class="checkimg"  src="img/unchecked.png">
+						<label class="radiolabel">8:30~9:30</label>
+						
+						<input type="radio" name="checktime"  value="1"/>
+				</div>
+				</div>
+			</li>
+			</div>
+		</form>
+		
+		
+		<div class="bot self-margin">
+			<button class="botleftBut">预约</button>
+			<button class="botrightBut" onclick="javascript:history.go(-1)">返回</button>
+		</div>
+	</body>
+	 <script type="text/javascript">
+	 //日期选择器的初始化
+        $(function () {
+			var currYear = (new Date()).getFullYear();	
+			var opt={};
+			opt.date = {preset : 'date'};
+			//opt.datetime = { preset : 'datetime', minDate: new Date(2012,3,10,9,22), maxDate: new Date(2014,7,30,15,44), stepMinute: 5  };
+			opt.datetime = {preset : 'datetime'};
+			opt.time = {preset : 'time'};
+			opt.default = {
+				theme: 'android-ics light', //皮肤样式
+		        display: 'modal', //显示方式 
+		        mode: 'scroller', //日期选择模式
+				lang:'zh',
+//		        startYear:currYear, //开始年份
+		        endYear:currYear + 10 ,//结束年份
+		        defaultValue : new Date($("#appDate").val()),
+			};
+
+			$("#appDate").val($("#appDate").val()).scroller('destroy').scroller($.extend(opt['date'], opt['default']));
+
+
+        });
+    </script>
+    <script>
+    $(function(){
+    	
+    	//单选框的样式控制 
+    	$(".radiocheck").click(function(){
+    		var status=$(this).attr('status');
+    		var index=$(this).attr('index');
+    		//如果是选中状态的
+    		if(status==1){
+    			
+    		}
+    		//如果不是选中状态的
+    		else{
+    			$(this).find('input').attr('checked',true);
+    			$(this).find('.checkimg').attr('src','img/checked.png');
+    			$(this).attr('status','1');
+    			//如果是第一个
+    		if(index==0){
+    		$(this).next().find('input').attr('checked',false);
+    			$(this).next().find('.checkimg').attr('src','img/unchecked.png');
+    			$(this).next().attr('status','0');
+    		}
+    		//如果是第二个
+    		else{
+    			$(this).prev().find('input').attr('checked',false);
+    			$(this).prev().find('.checkimg').attr('src','img/unchecked.png');
+    			$(this).prev().attr('status','0');
+    		}
+    		}
+    		
+    	})
+    	
+    	
+    	
+    	
+    })
+    
+    </script>
+</html>

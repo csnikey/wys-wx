@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="msapplication-tap-highlight" content="no" />
+		<meta name="format-detection" content="telphone=no" />
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<link href="css/bootstrap.min.css" />
+		<script src="js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="css/wyswx.css" />
+		<title>五云山疗养院</title>
+		<style>
+         .qschoice{
+         	-webkit-tap-highlight-color: rgba(255,0,0,0);
+
+         }
+		</style>
+	</head>
+	<body id="body">
+		
+		<div class="title" id="theme">
+  			<div class="title-name">心理测评</div>
+  			<div class="title-left">
+     			<a href="javascript:history.go(-1)"><img src="img/backicon.png" class="myimg"></a>
+   			</div>
+ 			<div class="title-right"></div>
+		</div>
+		<!--问题列表-->
+<div class="qsul ">
+		  <li>
+		  	<div class="qstitle">1.我和其他人处理的很好</div>
+		  	<div class="qschoicediv">
+		    <label class="active qschoice" status="1">dscd</label>
+		    <label class=" qschoice" status="0">很少有 <input type="radio" name="qs1" value="1" /></label>
+		    <label class=" qschoice" status="0">有时有 <input type="radio" name="qs1" value="2" /></label>
+		    <label class=" qschoice" status="0">较多时候 <input type="radio" name="qs1" value="3" /></label>
+		    <label class=" qschoice" status="0">总是这样sdcdsc <input type="radio" name="qs1" value="4" /></label>
+		   </div>
+		 </li>
+		 
+		  <li>
+		  	<div class="qstitle">2.我和其他人处理的很好</div>
+		  	<div class="qschoicediv">
+		    <label class="active qschoice" status="1">从未<input type="radio" name="qs2" value="0" checked="checked" /></label>
+		    <label class=" qschoice" status="0">很少有 <input type="radio" name="qs2" value="1" /></label>
+		    <label class=" qschoice" status="0">有时有 <input type="radio" name="qs2" value="2" /></label>
+		    <label class=" qschoice" status="0">较多时候 <input type="radio" name="qs2" value="3" /></label>
+		    <label class=" qschoice" status="0">总是这样sdcdsc <input type="radio" name="qs2" value="4" /></label>
+		   </div>
+		 </li>
+		
+			
+		</div>
+		
+		
+
+		<div class="bot " style="margin-top:40px">
+			<div>
+			<button class="botblockBut">开始测评</button>
+			</div>
+		</div>
+		<br>
+	</body>
+	<script>
+		$(function(){
+			var car=function(name,price){
+				this.name=name;
+				this.num=4;
+				this['price']=price;
+				this[5]=price;
+				
+				
+			};
+			var mycar=new car('luhu',50000);
+			console.log(mycar.name+':'+mycar[5]);
+			
+			
+			
+			//问题选项的选中与交互效果脚本设置 
+			$('.qschoice').click(function(){
+				var status=$(this).attr("status");
+//				之前是未选中的
+				if(status==0){
+					
+					$(this).parent().find('.qschoice').removeClass('active');
+					$(this).parent().find('.qschoice').attr("status",'0');
+					$(this).parent().find('.qschoice input').attr("checked",false);
+					$(this).addClass('active');
+					$(this).attr("status",'1');
+					$(this).find('input').attr("checked",true);
+					return false;
+					
+				}
+				//之前是选中的 不做任何操作
+				else{
+					
+					return false;
+				}
+				
+				
+				
+			})
+			
+			
+			
+			
+			
+		})
+		
+		
+	</script>
+
+</html>

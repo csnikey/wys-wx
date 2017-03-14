@@ -1,0 +1,4 @@
+/*确认的标题  修正居中的效果*/
+.layermchild h3 {
+	text-align: center;
+}

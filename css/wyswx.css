@@ -1,0 +1,635 @@
+/*样式初始化*/
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+a {
+  text-decoration: none;
+  color: #000!important;
+}
+li {
+  list-style: none;
+}
+body {
+  font-size: 14px;
+  color: #000;
+  font-family: "Microsoft YaHei";
+  background: #F5F5F5;
+  padding-bottom:20px;
+}
+.red{color:red;}
+a:hover {
+  text-decoration: none;
+  color: #000!important;
+}
+a:active {
+  color: #000!important;
+}
+.self-margin{
+	margin-top:15px;
+}
+.red{
+	color:red;
+}
+
+.title {
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  color: white;
+  font-size: 20px;
+  background-color: #aa3919;
+  position: relative;
+  padding:0 40px;
+}
+.title-name {
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.title-left,.title-right {
+	width:40px;
+	height:40px;
+  position: absolute;
+  top: 0px;
+  color: white;
+}
+.title-left{
+	left:0;
+}
+.title-right{
+	right:0px;
+}
+.title-left a,.title-right a {
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+}
+.title-left a  img,.title-right a  img{
+	height: 24px;
+margin-top:-6px;
+}
+
+
+
+
+/*个人信息的页面样式 通用表单样式*/
+
+.formul{
+	border-top:#F4F4F4 1px solid;
+	border-bottom:#F4F4F4 1px solid;
+	background: #fff;
+	
+}
+.formdiv{
+padding-left:20px;
+}
+.formul li{
+	border-bottom:#F4F4F4 1px solid;
+	height:40px;
+	line-height:40px;
+	position:relative;
+	font-size: 16px;
+	padding-left:70px;
+	padding-right:15px;
+	vertical-align: middle;
+}
+.formul li div{
+	overflow: hidden;
+	height: 40px;
+}
+ .formul li div .radiocheck{
+ 	display: inline-block;
+ }
+.formul li div .datatype{
+	width: 70px;
+	position: absolute;
+	left:0;
+	top:0;
+}
+.formul li div .data{
+	line-height: 20px;
+	font-size: 16px;
+	border:none;
+	height:20px;
+	outline: none;
+	width:100%;
+}
+.formul li div .checkimg,.formul li div .seximg{
+	width:25px;
+	float:left;
+	margin-top:8px;
+}
+
+
+.formul li div .radiolabel{
+	display: inline-block;
+	height: 40px;
+	vertical-align: middle;
+	float: left;
+}
+.formul li div input[type=radio]{
+	display: none;
+}
+.formul li:last-child{
+border-bottom:none;
+}
+.formul li .needtip{
+	position:absolute;
+	top:0;
+	left:-10px;
+}
+.bot{
+	padding-left:10px;
+	padding-right:10px;
+	overflow: hidden;
+}
+.bot .botblockBut{
+	width:100%;
+	height:40px;
+	color:#fff;
+	background: #AA3919;
+	line-height: 40px;
+	border-radius:5px ;
+	font-size: 18px;
+}
+.bot .botleftBut,.bot .botrightBut{
+	width:45%;
+	height:40px;
+	color:#fff;
+	line-height: 40px;
+	border-radius:5px ;
+	font-size: 18px;
+}
+.bot .botleftBut{
+		float: left;
+		background: #AA3919;
+}
+.bot .botrightBut{
+	background: #999999;
+	float: right;
+
+}
+
+
+/*预约确认信息的样式*/
+.topmsg{
+	background: #fff;
+	line-height: 40px;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-size: 16px;
+	overflow: hidden;
+	border-bottom: 1px solid #E7E7E7;
+	border-top: 1px solid #E7E7E7;
+}
+.topmsg li:nth-child(2n+1){
+	width: 40%;
+	float: left;
+	overflow: hidden;
+	height:40px;
+	white-space:nowrap;
+ text-overflow:ellipsis;
+
+}
+.topmsg li:nth-child(2n){
+	width: 60%;
+	float: left;
+	overflow: hidden;
+	height:40px;
+	white-space:nowrap;
+ text-overflow:ellipsis;
+
+}
+.topmsg li .datatype{
+	font-family: '黑体';
+	
+}
+.topmsg li .data{
+	color:#AAAAAA;
+	
+}
+
+.msgul,.msgul2{
+		background: #fff;
+	line-height: 40px;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-size: 16px;
+	overflow: hidden;
+	border-bottom: 1px solid #E7E7E7;
+	border-top: 1px solid #E7E7E7;
+}
+.msgul li{
+	border-bottom: 1px solid #E7E7E7;
+	height:40px;
+	padding-left: 75px;
+	position: relative;
+}
+.msgul li div,.msgul2 li div{
+	height:40px;
+	overflow: hidden;
+}
+
+.msgul li:last-child,.msgul2 li:last-child{
+	border-bottom: none;
+}
+.msgul li .datatype,.msgul2 li .datatype{
+	font-family: '黑体';
+	float:left;
+	position: absolute;
+	left: 0px;
+	top:0px;
+		  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.msgul li .datatype{
+		width:75px;
+}
+.msgul li .data,.msgul li .data2,.msgul2 li .data,.msgul2 li .data2{
+	width:100%;
+	display: inline-block;
+	text-align: right;
+		  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.msgul li .data,.msgul2 li .data{
+	color:#B9B9B9;
+}
+.msgul li .data2,.msgul2 li .data2{
+	color:#F3AF45;
+}
+
+/*信息列表2 针对左边项目名称较长的*/
+.msgul2 li{
+	border-bottom: 1px solid #E7E7E7;
+	height:40px;
+	padding-left: 55%;
+	position: relative;
+}
+
+.msgul2 li .datatype{
+	width:55%;
+}
+
+
+.contlabel{
+	color:#6F6F6F;
+	height:40px;
+	font-size: 16px;
+	line-height: 40px;
+	padding-left: 10px;
+}
+/*菜单列表的样式  通用样式*/
+.menuul{
+	border-top:#F4F4F4 1px solid;
+	border-bottom:#F4F4F4 1px solid;
+	background: #fff;
+
+}
+.menuul a{
+	display: block;
+	overflow: hidden;
+	padding-left:40px;
+}
+.menuul a li{
+	border-bottom: 1px solid #E7E7E7;
+	height:45px;
+		padding-right:20px;
+		position: relative;
+}
+.menuul a:last-child li{
+	border-bottom: none;
+}
+.menuul a .menuitemimg{
+	width: 30px;
+	position: absolute;
+	left: -35px;
+	top:6px;
+	
+}
+.menuul a .infoactImg{
+width: 17px;
+position: absolute;
+right: 3px;
+top: 11px;
+	
+}
+.menuul a .menuitemname,.menuul a .menupackagename{
+	 white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  height:45px;
+  line-height: 45px;
+  font-size: 18px;
+  float:left;
+}
+.menuul a .menuitemname{
+	width: 65%;
+	font-family: '黑体';
+}
+.menuul a .menupackagename{
+	width:35%;
+	color:#F5BB63;
+}
+
+/*套餐详情的通用样式*/
+.packageul{
+		border-top:#F4F4F4 1px solid;
+	border-bottom:#F4F4F4 1px solid;
+	background: #fff;
+	overflow: hidden;
+}
+.packageul li{
+	height:90px;
+	border-bottom:#F4F4F4 1px solid;
+	padding:10px;
+	padding-left:70px;
+	position: relative;
+}
+ .packageul li .checkimg,.packageul li .circleimg{
+ 	width:36px;
+ 	position: absolute;
+ 	top:37px;
+ 	left: 15px;
+ }
+
+ .packageul li .rightcont{
+ 	overflow: hidden;
+ }
+  .packageul li .titlediv{
+  	padding-right:85px;
+  	height:50px;
+  	position:relative;
+  	
+  }
+   .packageul li .titlediv .infoact{
+   	font-family: '黑体';
+   	width:80px;
+   	color:#AA3919;
+   	border:1px solid #AA3919;
+   	border-radius:3px;
+   	height:28px;
+   	line-height:28px;
+   	position: absolute;
+   	text-align: center;
+   	top:0;
+   	right:0;
+   }
+    .packageul li .titlediv .titlename{
+    		 white-space: nowrap;
+  overflow: hidden;
+  height:25px;
+  text-overflow: ellipsis;
+  font-size: 18px;
+  line-height: 25px;
+    }
+  .packageul li .titlediv .titleinfo{
+  	
+    		 white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 14px;
+  height:20px;
+  line-height: 20px;
+    }
+      .packageul li .info{
+      	height:40px;
+      	line-height:20px;
+      	font-size: 14px;
+      	color:#C9C9C9;
+      	white-space:normal;
+text-overflow: ellipsis; 
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 2;
+display: -webkit-box;
+
+      	
+      }
+      
+      
+ /*老年套餐页弹出框的样式*/
+.popdiv{
+	/*display: none;*/
+	display: block;
+	background: #fff;
+	border-radius: 3px;
+	max-height: 400px;
+	height:auto;
+
+	overflow-y: scroll;
+	position: relative;
+}
+
+.popdiv  .popdivBot{
+	height:40px;
+	line-height: 40px;
+
+	background: #E0E0E0;
+	overflow: hidden;
+	padding-left:10px;
+	padding-right: 10px;
+}
+.popdiv  .popdivBot .botleft,.botright{
+	width: 50%;
+	height:40px;
+	float: left;
+	position: relative;
+
+	
+}
+/*.popdiv  .popdivBot .botleft{
+	width: 39%;
+}
+.popdiv  .popdivBot .botright{
+	width: 61%;
+}*/
+.popdiv  .popdivBot .botleft div,.popdiv  .popdivBot .botright div{
+	padding-left: 20px;
+	height:40px;
+	overflow: hidden;
+		white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.popdiv  .popdivBot  div .packageTelimg, .packageMailimg{
+	width: 20px;
+	position: absolute;
+	left: 0;
+	top:10px;
+}
+.popdiv  .popdivBot  div .packageTelimg{
+	left: 5px;
+}
+.popdiv .poptitle{
+	border-bottom: 1px solid #F4F4F4;
+	height:auto;
+	line-height:20px;
+	padding:10px;
+	font-size: 18px;
+	padding-left:35px;
+	padding-right:30px;
+
+}
+.popdiv .poptitle .closeimg {
+	position: absolute;
+	right:0;
+	top:0;
+	width: 30px;
+}
+ .popdiv .poptitle .packageSymimg{
+ 		position: absolute;
+	left:10px;
+	top:10px;
+	width: 20px;
+ }
+.popdiv .checkitemli{
+	border-bottom: 1px solid #F4F4F4;
+	height:auto;
+	padding:10px 15px;
+}
+.popdiv .checkitemli .itempaName{
+	font-size: 17px;
+	line-height: 30px;
+	color:#545454;
+	height:auto;
+	font-family: '黑体';
+}
+
+.popdiv .checkitemli .itemsub{
+  padding-left: 20px;
+	height:auto;
+}
+.popdiv .checkitemli .itemsub .itemsubName{
+  font-size: 17px;
+	line-height: 30px;
+	color:#8A8A8A;
+	height:auto;
+	font-family: '黑体';
+}
+.popdiv .checkitemli .itemsub .itemsubCont{
+  font-size: 16px;
+	line-height: 18px;
+	color:#A8A8A8;
+	height:auto;
+}
+
+
+
+/*小工具自测样式 */
+
+.toolul{
+	padding-left:20px;
+	padding-right:20px;
+	overflow: hidden;
+	
+	
+}
+.toolul a{
+		display: inline-block;
+			width: 45%;
+		border:1px solid #F4C3C3;
+		border-radius: 5px;
+		text-align: center;
+		background: #fff;
+		padding:10px 0;
+		margin-top:20px;
+}
+.toolul a:nth-child(2n+1){
+	float:left;
+	margin-left:2%;
+}
+.toolul a:nth-child(2n){
+	float:right;
+	margin-right:2%;
+}
+.toolul a .toolimg{
+	width: 50%;
+	margin: 0 auto;
+}
+.toolul a .tooltitle{
+	width: 100%;
+	line-height: 30px;
+	text-align: center;
+	font-size: 16px;
+}
+/*不同区块的颜色值*/
+.toolul a:nth-child(100n+1){
+	border-color:#F4C3C3;
+	color:#F15050!important;
+}
+.toolul a:nth-child(100n+2){
+	border-color:#F4C3C3;
+	color:#F6CB5E!important;
+}
+.toolul a:nth-child(100n+3){
+	border-color:#F4C3C3;
+	color:#75A3F4!important;
+}
+.toolul a:nth-child(100n+4){
+	border-color:#F4C3C3;
+	color:#57CA68!important;
+}
+.toolul a:nth-child(100n+5){
+	border-color:#F4C3C3;
+	color:#F6B895!important;
+}
+
+
+.contpanel{
+	padding:0 10px;
+}
+/*问题列表*/
+.qsul{
+	padding:0 10px;
+	
+}
+.qsul li{
+	margin-top: 15px;
+	border:1px solid  #E6E6E6;
+	border-radius: 3px;
+	padding:10px 10px 15px 10px;
+	background: #fff;
+	overflow: hidden;
+	
+}
+.qsul li .qstitle{
+	line-height:30px;
+	padding-bottom:10px;
+	height:auto;
+	border-bottom:1px solid  #E6E6E6;
+	font-size: 18px;
+	
+	
+}
+.qsul li  .qschoicediv .active{
+	border-color:#B8583E;
+	color:#B8583E;
+}
+.qsul li .qschoice{
+	width:30%;
+	float: left;
+	text-align: center;
+	border:1px solid  #E6E6E6;
+	margin-left:2.8%;
+	height:30px;
+	line-height: 30px;
+	border-radius: 2px;
+	 white-space: nowrap;
+  overflow: hidden;
+  margin-top: 10px;
+  text-overflow: ellipsis;
+  padding:0 1px;
+	
+}
+.qsul li .qschoice input[type=radio]{
+	display: none;
+}
+.qsul li .qschoice:nth-child(3n+1){
+	margin-left:0%;
+}
